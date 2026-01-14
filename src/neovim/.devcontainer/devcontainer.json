@@ -1,0 +1,11 @@
+{
+    "image": "mcr.microsoft.com/devcontainers/base:alpine",
+    "features": {
+        "ghcr.io/stu-bell/devcontainer-features/neovim": {}
+    },
+    "mounts": [
+        // source should point to your host nvim config location
+        "source=${localEnv:HOME}/.config/nvim/,target=/config/nvim,type=bind"
+      // "source=${localEnv:LOCALAPPDATA}/nvim/,target=/config/nvim,type=bind"
+    ]
+}
