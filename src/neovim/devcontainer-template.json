@@ -1,0 +1,29 @@
+{
+    "id": "neovim",
+    "version": "0.1.0",
+    "name": "Neovim Template",
+    "description": "Illustrates how to install Neovim and mount local config",
+    "documentationURL": "https://github.com/stu-bell/devcontainer-templates/tree/main/src/neovim",
+    "publisher": "Stuart Bell",
+    "licenseURL": "https://github.com/stu-bell/devcontainer-templates/blob/main/LICENSE",
+    "options": {
+        "imageUri": {
+            "type": "string",
+            "description": "Dev Container Image",
+            "proposals": [
+                "mcr.microsoft.com/devcontainers/base:alpine",
+                "mcr.microsoft.com/devcontainers/base:debian",
+                "mcr.microsoft.com/devcontainers/base:ubuntu",
+            ],
+            "default": "mcr.microsoft.com/devcontainers/base:alpine"
+        },
+        "hostConfigLocation": {
+            "type": "string",
+            "description": "Location of Neovim config on host. Typically HOME for MacOS/Linux, LOCALAPPDATA for Windows. Maybe an absolute file path",
+            "proposals": [
+              "${localEnv:LOCALAPPDATA}/nvim/",
+              "${localEnv:HOME}/nvim/"
+        }
+    },
+    "platforms": ["Any"]
+}
