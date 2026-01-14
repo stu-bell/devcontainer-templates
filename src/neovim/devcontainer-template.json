@@ -22,7 +22,8 @@
             "description": "Location of Neovim config on host. Typically HOME for MacOS/Linux, LOCALAPPDATA for Windows. Maybe an absolute file path",
             "proposals": [
               "${localEnv:LOCALAPPDATA}/nvim/",
-              "${localEnv:HOME}/nvim/"
+              "${localEnv:HOME}/.config/nvim/"
+            ]
         }
     },
     "platforms": ["Any"]
