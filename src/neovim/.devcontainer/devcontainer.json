@@ -1,0 +1,10 @@
+{
+    "image": "${templateOption:imageUri}",
+    "features": {
+        "ghcr.io/stu-bell/devcontainer-features/neovim": {}
+    },
+    "mounts": [
+        // source should point to your host nvim config location
+        "source=${templateOption:hostConfigLocation},target=/config/nvim,type=bind"
+    ]
+}
